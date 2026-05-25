@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Movie Search App</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white min-h-screen">
+
+  <!-- Header -->
+  <header class="bg-gray-800 p-4 shadow-lg">
+    <h1 class="text-3xl font-bold text-center text-yellow-400">
+      Movie Search App
+    </h1>
+  </header>
+
+  <!-- Search Section -->
+  <section class="p-6 flex justify-center">
+    <div class="flex gap-2 w-full max-w-xl">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search movies..."
+        class="flex-1 p-3 rounded-lg text-black outline-none"
+      />
+
+      <button
+        id="searchBtn"
+        class="bg-yellow-400 text-black px-6 rounded-lg font-semibold hover:bg-yellow-500"
+      >
+        Search
+      </button>
+    </div>
+  </section>
+
+  <!-- Movies Container -->
+  <section
+    id="moviesContainer"
+    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6"
+  >
+  </section>
+
+  <!-- Modal -->
+  <div
+    id="movieModal"
+    class="fixed inset-0 bg-black bg-opacity-70 hidden justify-center items-center p-4"
+  >
+    <div class="bg-gray-800 rounded-xl max-w-2xl w-full p-6 relative">
+
+      <button
+        id="closeModal"
+        class="absolute top-2 right-4 text-2xl text-white"
+      >
+        ✖
+      </button>
+
+      <div id="modalContent"></div>
+
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
